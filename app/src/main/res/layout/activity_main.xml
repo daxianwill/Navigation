@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/infoCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:elevation="4dp"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvTrackName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="轨迹名称"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FF000000" />
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="距离: 0.00 公里"
+            android:textSize="14sp"
+            android:textColor="#FF6200EE" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvAscent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上升: 0 米"
+                android:textSize="12sp"
+                android:textColor="#FF4CAF50" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:id="@+id/tvDescent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下降: 0 米"
+                android:textSize="12sp"
+                android:textColor="#FFF44336" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPointCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="点数: 0"
+            android:textSize="12sp"
+            android:textColor="#FF757575" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:clipToPadding="false">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddTrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="添加轨迹"
+            android:src="@android:drawable/ic_input_add"
+            app:fabSize="normal"
+            app:tint="@android:color/white"
+            app:backgroundTint="#FF6200EE"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="当前位置"
+            android:src="@android:drawable/ic_menu_mylocation"
+            app:fabSize="normal"
+            app:tint="@android:color/white"
+            app:backgroundTint="#FF03DAC5"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="我的轨迹"
+            android:src="@android:drawable/ic_menu_recent_history"
+            app:fabSize="normal"
+            app:tint="@android:color/white"
+            app:backgroundTint="#FF9800"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="删除轨迹"
+            android:src="@android:drawable/ic_menu_delete"
+            app:fabSize="normal"
+            app:tint="@android:color/white"
+            app:backgroundTint="#FFCF6679"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

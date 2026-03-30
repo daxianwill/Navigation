@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">轨迹导航</string>
+    <string name="import_kml">导入KML</string>
+    <string name="location">定位</string>
+    <string name="clear_track">清除轨迹</string>
+    <string name="loading">加载中...</string>
+    <string name="error_permission_location">需要位置权限才能使用定位功能</string>
+    <string name="error_permission_storage">需要存储权限才能导入KML文件</string>
+</resources>
